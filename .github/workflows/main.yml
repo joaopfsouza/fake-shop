@@ -15,9 +15,12 @@ jobs:
   
   - run: |
       ls -lha
+      pwd
       cd ..
       echo "========================"
-      ls-lha
+      ls -lha
+      echo "========================"
+      pwd
     name: "Primeiro"
 
  CD:
