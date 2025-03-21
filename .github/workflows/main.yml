@@ -23,7 +23,7 @@ jobs:
     uses: docker/build-push-action@v6
     with:
       push: true
-      context: ${{ github.workspace}}
+      context: ${{ github.workspace}}/src
       tags: |
         ${{ vars.DOCKERHUB_USERNAME  }}/${{ vars.DOCKER_IMAGE}}:v${{ github.run_number }}
         ${{ vars.DOCKERHUB_USERNAME  }}/${{ vars.DOCKER_IMAGE}}
