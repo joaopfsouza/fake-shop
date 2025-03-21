@@ -15,6 +15,7 @@ jobs:
   # Define Environment Variables
   environment: dev
   steps:
+
   # Git  Clone
   - uses: actions/checkout@v4
 
@@ -39,6 +40,10 @@ jobs:
   needs: [CI]
   environment: dev
   steps:
+    
+  # Git  Clone
+  - uses: actions/checkout@v4
+
   # Set kubeconfig K8S DigitalOcean
   - uses: azure/k8s-set-context@v4
     with:
@@ -48,7 +53,6 @@ jobs:
   # Change image manifest and deploy in K8S
   - uses: Azure/k8s-deploy@v5
     with:
-      namespace: 'myapp'
       manifests: |
         k8s/deployment.yml
       images: ${{ vars.DOCKERHUB_USERNAME  }}/${{ vars.DOCKER_IMAGE}}:v${{ github.run_number }}
