@@ -12,24 +12,11 @@ jobs:
   runs-on: ubuntu-latest
   steps:
   - uses: actions/checkout@v4
-  
-  - run: |
-      ls -lha
-      pwd
-      cd ..
-      echo "========================"
-      ls -lha
-      echo "========================"
-      pwd
-      cd ..
-      echo "========================"
-      ls -lha
-      echo "========================"
-      pwd
-    name: "Primeiro"
+
 
  CD:
   runs-on: ubuntu-latest
+  needs: [CI]
   steps:
   - run: "echo CD"
   
