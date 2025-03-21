@@ -14,9 +14,9 @@ jobs:
   - run: echo "First"
     name: "Primeiro"
 
-  CD:
-   run-on: ubuntu-latest
-   steps:
-   - run: "echo CD"
+ CD:
+  run-on: ubuntu-latest
+  steps:
+  - run: "echo CD"
   
 
