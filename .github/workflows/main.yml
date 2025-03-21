@@ -1,0 +1,22 @@
+name: FakeShop
+run-name: "FakeShop ${{ github.run_id }}"
+
+on: 
+  push:
+    branches:
+      - 'main'
+  workflow_dispatch:
+
+jobs:
+ CI:
+  run-on: ubuntu-latest
+  steps:
+  - run: echo "First"
+    name: "Primeiro"
+
+  CD:
+   run-on: ubuntu-latest
+   steps:
+   - run: "echo CD"
+  
+
