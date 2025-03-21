@@ -9,13 +9,13 @@ on:
 
 jobs:
  CI:
-  run-on: ubuntu-latest
+  runs-on: ubuntu-latest
   steps:
   - run: echo "First"
     name: "Primeiro"
 
  CD:
-  run-on: ubuntu-latest
+  runs-on: ubuntu-latest
   steps:
   - run: "echo CD"
   
