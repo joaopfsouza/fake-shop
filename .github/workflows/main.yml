@@ -1,5 +1,5 @@
 name: FakeShop
-run-name: "FakeShop ${{ github.run_id }}"
+run-name: "FakeShop ${{ github.run_number }}"
 
 on: 
   push:
