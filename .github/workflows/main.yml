@@ -50,7 +50,7 @@ jobs:
     with:
       namespace: 'myapp'
       manifests: |
-        k8s/*.yml
+        k8s/deployment.yml
       images: ${{ vars.DOCKERHUB_USERNAME  }}/${{ vars.DOCKER_IMAGE}}:v${{ github.run_number }}
 
   
